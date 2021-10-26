@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+  <div class="text-center my-5">
+    <form method="post">
+      {% csrf_token %}
+      <div class="align-item-center">
+        {% render_field form.title class="form-control" placeholder="キーワードから探す" %}
+        <button class="btn btn-primary mt-2" type="submit">検索</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+
+<!--
+
+アプリID/デベロッパーID
+(applicationId / developerId)
+
+1069764878792879197
+
+application_secret
+
+930f3c4e48842381680bfa287d3ce3eec725304b
+
+アフィリエイトID
+(affiliateId)
+
+21dda127.f079c3bf.21dda128.27b8e184
+ -->
